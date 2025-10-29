@@ -1,0 +1,129 @@
+/*
+ * This CSS is for the whole document, it should be at the top of your file.
+ */
+body {
+    background: #0e949c;
+    background: radial-gradient(circle,
+    rgba(0, 20, 43, 1) 0%, 
+    rgba(66, 66, 66, 1) 0%, 
+    rgba(1, 13, 8, 1) 100%);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*A
+ * Your `h2` and `input` styles
+ */
+.content h2 b {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #fff;
+    font-family: montserrat;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 80%;
+    border: 1px;
+}
+input[type="textarea"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: lightblue;
+    padding: 10px;
+    border-color: blue;
+}
+h2 {
+    color: white;
+}
+/*
+ * This is the corrected CSS for your animation.
+ * It targets `li` elements inside the `.wrapper` container.
+ */
+.wrapper span {
+    position: fixed;
+    border: 5px;
+    box-shadow:
+        0 0 10px #e100ff,
+        0 0 10px #0072ff,
+        0 0 10px #0072ff,
+        0 0 10px #0072ff;
+    width: 50px; /* A default width and height */
+    height: 50px;
+    animation: animate2 40s linear infinite;
+    z-index: -1;
+}
+
+.wrapper span:nth-child(1) {
+    left: 120px;
+    animation-delay: 0.6s;
+}
+.wrapper span:nth-child(2) {
+    left: 10%;
+    animation-delay: 11s;
+    width: 60px;
+    height: 60px;
+}
+.wrapper span:nth-child(3) {
+    left: 20%;
+    animation-delay: 16s;
+}
+.wrapper span:nth-child(4) {
+    left: 30%;
+    animation-delay: 22s;
+    width: 80px;
+    height: 80px;
+}
+.wrapper span:nth-child(5) {
+    left: 40%;
+    animation-delay: 9s;
+}
+.wrapper span:nth-child(6) {
+    left: 50%;
+    animation-delay: 7s;
+}
+.wrapper span:nth-child(7) {
+    left: 60%;
+    animation-delay: 6s;
+    width: 100px;
+    height: 100px;
+}
+.wrapper span:nth-child(8) {
+    left: 70%;
+    animation-delay: 8s;
+}
+.wrapper span:nth-child(9) {
+    left: 80%;
+    animation-delay: 6s;
+    width: 90px;
+    height: 90px;
+}
+.wrapper span:nth-child(10) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-3000px) rotate(360deg);
+        opacity: 0;
+    }
+}
